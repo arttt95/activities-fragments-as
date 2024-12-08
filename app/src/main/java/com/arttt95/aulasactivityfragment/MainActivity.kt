@@ -28,9 +28,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnAbrir = findViewById(R.id.btn_abrir)
+
         btnAbrir.setOnClickListener {
 
             var intent = Intent(this, DetalhesActivity::class.java)
+
+            // Passar parameters para a próxima activity
+            intent.putExtra("filme", "The Witcher")
+            intent.putExtra("classificacao", 5)
+            intent.putExtra("avaliacoes", 9.2)
 
             startActivity(intent)
 
