@@ -34,9 +34,21 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this, DetalhesActivity::class.java)
 
             // Passar parameters para a próxima activity
-            intent.putExtra("filme", "The Witcher")
+            /*intent.putExtra("filme", "The Witcher")
             intent.putExtra("classificacao", 5)
-            intent.putExtra("avaliacoes", 9.2)
+            intent.putExtra("avaliacoes", 9.2)*/
+
+            val filme = Filme(
+                "Sem limites",
+                "Teste",
+                4.2,
+                "Steven",
+                "Warner"
+            )
+
+            intent.putExtra("filme", filme )
+
+
 
             startActivity(intent)
 
